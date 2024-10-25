@@ -8,7 +8,10 @@ jobs:
     steps:
       - name: Generate Output
         id: generate_output  # Step ID for referencing its outputs
-        run: echo "myValue=wibble" >> $GITHUB_ENV
+        # run: echo "myValue=wibble" >> $GITHUB_ENV
+        run: |
+          export FOO=bar
+          echo "::set-env name=FOO::$FOO"
 
       - name: Use Output in Subsequent Step
-        run: echo "$myValue"
+        run: echo "$FOO"
