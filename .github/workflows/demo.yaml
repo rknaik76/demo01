@@ -6,9 +6,9 @@ jobs:
   job01:
     runs-on: ubuntu-latest
     steps:
-    - name: Generate Output
-      id: generate_output  # Step ID for referencing its outputs
-      run: echo "name=output_value::Hello from Step 1" >> $GITHUB_OUTPUT
+    # - name: Generate Output
+    #   id: generate_output  # Step ID for referencing its outputs
+    #   run: echo "name=output_value::Hello from Step 1" >> $GITHUB_OUTPUT
 
-    - name: Use Output in Subsequent Step
-      run: echo "The output from Step 1 is: ${{ steps.generate_output.outputs.output_value }}"
+    # - name: Use Output in Subsequent Step
+    #   run: echo "The output from Step 1 is: ${{ steps.generate_output.outputs.output_value }}"
