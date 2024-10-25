@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: Generate Output
         id: generate_output  # Step ID for referencing its outputs
-        run: echo "name=output_value::Hello from Step 1" >> $GITHUB_OUTPUT
+        run: echo "::set-env name=FOO::demo demo"
 
       - name: Use Output in Subsequent Step
-        run: echo "The output from Step 1 is: ${{ steps.generate_output.outputs.output_value }}"
-        
+        run: echo "The output from Step 1 is: ${{ steps.generate_output.outputs.FOO }}"
+
       - name: hello
         run: echo "Hello world"
