@@ -1,6 +1,6 @@
 name: demojob01
 on:
-  push:
+#   push:
   workflow_dispatch: 
 jobs:
   job01:
@@ -12,3 +12,5 @@ jobs:
 
     # - name: Use Output in Subsequent Step
     #   run: echo "The output from Step 1 is: ${{ steps.generate_output.outputs.output_value }}"
+      - name: hello
+        run: echo "Hello world"
