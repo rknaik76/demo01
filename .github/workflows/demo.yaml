@@ -1,5 +1,6 @@
-name: demo
+name: demojob01
 on:
+  push:
   workflow_dispatch: 
 jobs:
   job01:
