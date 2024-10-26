@@ -8,6 +8,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: demojob
+        id: hello
         uses: rknaik76/hello-person-action@v1
         with:
-          name: "Spiderman"
+          who-to-greet: "Spiderman"
+        # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
